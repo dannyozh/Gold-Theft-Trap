@@ -15,13 +15,15 @@ var playerIsChoosing = function() {
     compareResultTrap();
 };
 
+var restartEverything = function () {
+    player.gold = 1;
+    computer.gold = 1;
+}
+
 document.querySelector("#butt").addEventListener('click', playerIsChoosing);
+document.querySelector("#restart").addEventListener('click', restartEverything);
 
-//global variables
-
-// var gameStage = 0;
-
-//creating player and computer objects
+//global variables, creating player and computer objects
 
 var player = {
     name: playerName,
@@ -35,8 +37,6 @@ var computer = {
     finalEndState: null,
 };
 // }
-
-
 
 //computer chooses
 
