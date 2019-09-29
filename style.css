@@ -1,4 +1,85 @@
+main container for first page*/
+
+.container {
+	max-width: 1250px;
+	margin: 0 auto;
+}
+
+/*header*/
+
 .game-header {
+	margin: 0 auto;
 	text-align: center;
-	.margin: 0 auto;
+}
+
+h1 {
+	font-family: "Montserrat";
+	font-size: 50px;
+}
+
+/*Stock images*/
+
+.display-images {
+	display:flex;
+	justify-content: center;
+	margin-top: 0 auto
+	justify-content: space-around;
+}
+
+img {
+	width: 400px;
+	height: 300px;
+	margin: 5px;
+	border-radius: 5px;
+
+}
+
+.landing-page-box {
+	justify-content: center;
+}
+
+/*landing page*/
+.instruction-boxes {
+	display:flex;
+	justify-content: center;
+	margin-top:61px;
+	font-family: "Montserrat";
+	font-size:22px;
+}
+
+.objectives-box {
+	width: 30%;
+	border:1px solid black;
+	padding: 15px;
+	border-radius: 20px;
+	margin: 5px;
+}
+
+.variations {
+	width: 30%;
+	border:1px solid black;
+	padding: 15px;
+	border-radius:25px;
+	margin: 5px;
+}
+
+/*start button*/
+
+.start-button {
+	border-radius: 16px;
+	font-weight: bold;
+	font-family: "Montserrat";
+	padding: 25px;
+	background-color: rgb(130, 176, 159);
+	margin:0 auto;
+	display:flex;
+	font-size: 30px;
+}
+
+/*End of container for first page*/
+
+/*container for second page*/
+
+.player-box {
+	border: 2px solid black;
 }
