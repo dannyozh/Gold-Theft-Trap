@@ -4,14 +4,27 @@ console.log("woo fun animation");
 var win = function () {
     if (player.gold === 5 || computer.gold === 0) {
         document.querySelector("#resultBox").innerHTML =playerName + " wins!";
+        document.querySelector(".player-options").style.visibility = "hidden";
+        document.querySelector("#playerScore").style.background = "yellow";
+        confetti.start();
     } else if (computer.gold === 5 || player.gold === 0) {
         document.querySelector("#resultBox").innerHTML = "Computer wins!";
+        document.querySelector(".player-options").style.visibility = "hidden";
+        document.querySelector("#computerScore").style.background = "yellow";
+        confetti.start();
     } else if (computer.gold === 5 && player.gold === 5) {
         document.querySelector("#resultBox").innerHTML = "It's a draw!";
+        document.querySelector(".player-options").style.visibility = "hidden";
     } else if (playerChoice === "Theft" && computerChoice === "Trap") {
-        document.querySelector("#resultBox").innerHTML = "Computer used Trap against" + " " + playerName + "'s Theft" + " and won, ending the game with" + " " + computer.gold + " gold.";
+        document.querySelector("#resultBox").innerHTML = "Computer used Trap" + "You used Theft" + "Computer wins instantly with" + " " + computer.gold + " gold!";
+        document.querySelector("#computerScore").style.background = "yellow";
+        document.querySelector(".player-options").style.visibility = "hidden";
+        confetti.start();
     } else if (playerChoice === "Trap" && computerChoice === "Theft") {
         document.querySelector("#resultBox").innerHTML = "Computer played Theft." + " " + playerName + " called the computer's bluff, winning instantly with a total of" + " " + player.gold + " gold.";
+        document.querySelector(".player-options").style.visibility = "hidden";
+        document.querySelector("#playerScore").style.background = "yellow";
+        confetti.start();
     }
 };
 
@@ -155,11 +168,15 @@ var clearCounter = function () {
     player.gold = 1;
     computer.gold = 1;
     console.clear();
+    document.querySelector(".player-options").style.visibility = "visible";
     document.querySelector("#resultBox").innerHTML = "Result will be determined here!";
     document.querySelector("#playerScoreText").innerHTML = playerName + " gold score is " + player.gold + ".";
     document.querySelector("#computerLog").innerHTML = "Computer's gold score is " + computer.gold + ".";
     document.querySelector("#starter-image1").setAttribute("src", "imgs/gold-coin.jpg");
     document.querySelector("#starter-image2").setAttribute("src", "imgs/gold-coin.jpg");
+    document.querySelector("#playerScore").style.background = "white";
+    document.querySelector("#computerScore").style.background = "white";
+    confetti.stop();
     };
     document.getElementById("theRestartButton").addEventListener('click', clearCounter);
 

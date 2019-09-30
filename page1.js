@@ -18,20 +18,7 @@ var playerChoice;
 var computerChoice;
 var playerCount;
 
-// create counter using DOM
-
-
-////buttons & selectors
-
-// var restartEverything = function () {
-//     player.gold = 1;
-//     computer.gold = 1;
-//     console.clear();
-//     playerIsChoosing();
-//     win();
-// };
-
-
+//press start button
 var clearPage = function () {
     document.getElementById("start").style.display = "none";
     playerName = prompt("Welcome to Gold Theft Trap. Please enter your name.");
@@ -40,10 +27,9 @@ var clearPage = function () {
 };
 
 document.querySelector("#start").addEventListener('click', clearPage);
-// document.querySelector("#continue").addEventListener('click', playerIsChoosing);
-// document.querySelector("#restart").addEventListener('click', restartEverything);
 
 //winning/losing variations
+
 var compareResultGold = function () {
     if (playerChoice === "Gold" && computerChoice === "Gold") {
         console.log("Both players get 1 Gold");
@@ -115,7 +101,6 @@ var compareResultTheft = function() {
             // change image
                 document.querySelector("#starter-image1").setAttribute("src", "imgs/theft-coin.jpg");
                 document.querySelector("#starter-image2").setAttribute("src", "imgs/theft-coin.jpg");
-            // change result
                 document.querySelector("#resultBox").innerHTML = "Both players played Theft, ending up with no gains.";
 
 
@@ -126,7 +111,6 @@ var compareResultTheft = function() {
             // change image
                 document.querySelector("#starter-image1").setAttribute("src", "imgs/theft-coin.jpg");
                 document.querySelector("#starter-image2").setAttribute("src", "imgs/trap-coin.jpg");
-            // change result
     }
 };
 
@@ -152,7 +136,6 @@ var compareResultTrap = function () {
             // change image
                 document.querySelector("#starter-image1").setAttribute("src", "imgs/trap-coin.jpg");
                 document.querySelector("#starter-image2").setAttribute("src", "imgs/theft-coin.jpg");
-            // change result
 
     } else if (playerChoice === "Trap" && computerChoice === "Trap") {
         console.log("Both players tried to trap each other. Both made no gains.");
