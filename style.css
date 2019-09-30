@@ -190,3 +190,15 @@ border: 1px solid black;
 	font-size: 30px;
 	width: 15%;
 }
+
+.reload-button {
+	border-radius: 16px;
+	font-weight: bold;
+	font-family: "Montserrat";
+	padding: 10px;
+	background-color: rgb(130, 176, 159);
+	margin:5px;
+	display:flex;
+	font-size: 30px;
+	width: 20%;
+}

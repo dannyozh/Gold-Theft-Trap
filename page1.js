@@ -101,6 +101,7 @@ var compareResultTheft = function() {
             // change image
                 document.querySelector("#starter-image1").setAttribute("src", "imgs/theft-coin.jpg");
                 document.querySelector("#starter-image2").setAttribute("src", "imgs/theft-coin.jpg");
+            // change result
                 document.querySelector("#resultBox").innerHTML = "Both players played Theft, ending up with no gains.";
 
 
@@ -136,6 +137,7 @@ var compareResultTrap = function () {
             // change image
                 document.querySelector("#starter-image1").setAttribute("src", "imgs/trap-coin.jpg");
                 document.querySelector("#starter-image2").setAttribute("src", "imgs/theft-coin.jpg");
+            // change result
 
     } else if (playerChoice === "Trap" && computerChoice === "Trap") {
         console.log("Both players tried to trap each other. Both made no gains.");

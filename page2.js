@@ -16,7 +16,7 @@ var win = function () {
         document.querySelector("#resultBox").innerHTML = "It's a draw!";
         document.querySelector(".player-options").style.visibility = "hidden";
     } else if (playerChoice === "Theft" && computerChoice === "Trap") {
-        document.querySelector("#resultBox").innerHTML = "Computer used Trap" + "You used Theft" + "Computer wins instantly with" + " " + computer.gold + " gold!";
+        document.querySelector("#resultBox").innerHTML = "Computer used Trap" + "You used Theft" + "Computer wins instantly with" + " " + computer.gold + "gold!";
         document.querySelector("#computerScore").style.background = "yellow";
         document.querySelector(".player-options").style.visibility = "hidden";
         confetti.start();
@@ -89,11 +89,16 @@ trapButton.className = "trap-button";
 trapButton.id = "theTrapButton";
 trapButton.innerText = "Trap";
 
-// create reset button
+// create reset button and reload
 var restartButton = document.createElement("button");
 restartButton.className = "restart-button";
 restartButton.id = "theRestartButton";
 restartButton.innerText = "Restart";
+
+var reloadButton = document.createElement("button");
+reloadButton.className = "reload-button";
+reloadButton.id = "theReloadButton";
+reloadButton.innerText = "Back To Home";
 
 // append everything
 
@@ -120,6 +125,7 @@ computerCountChange.innerHTML = "Computer's gold score is " + computer.gold + ".
 computerCount.appendChild(computerCountChange);
 computerCount.appendChild(starterImage2);
 counterDiv.appendChild(computerCount);
+pageDiv.appendChild(reloadButton);
 pageDiv.appendChild(restartButton);
 pageDiv.appendChild(resultsDiv);
 pageDiv.appendChild(counterDiv);
@@ -179,6 +185,12 @@ var clearCounter = function () {
     confetti.stop();
     };
     document.getElementById("theRestartButton").addEventListener('click', clearCounter);
+
+var reloadPage = function () {
+    window.location.reload();
+}
+
+    document.getElementById("theReloadButton").addEventListener('click', reloadPage);
 
 };
 
