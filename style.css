@@ -31,6 +31,7 @@ img {
 	height: 300px;
 	margin: 5px;
 	border-radius: 5px;
+	max-width:100%;
 
 }
 
@@ -79,7 +80,113 @@ img {
 /*End of container for first page*/
 
 /*container for second page*/
+.game-box {
+	max-width: 1250px;
+	margin: 0 auto;
+}
 
-.player-box {
-	border: 2px solid black;
+.game-buttons {
+	align-items: flex-end;
+}
+
+/*score counter*/
+.counter-boxes {
+	display:flex;
+	justify-content: center;
+}
+
+.player-counter {
+	border: 1px solid black;
+	padding: 20px;
+	width: 25%;
+	height: 90%;
+ border-radius: 20px;
+ margin: 5px;
+ font-size: 25px;
+ font-family: "Montserrat";
+}
+
+.computer-counter {
+	border: 1px solid black;
+	padding: 20px;
+	width: 25%;
+	height: 463px;
+ border-radius: 20px;
+ margin:5px;
+ font-size: 25px;
+ font-family: "Montserrat";
+}
+
+/*buttons*/
+
+.player-options {
+	display: inline-flex;
+	justify-content: center;
+}
+
+.gold-button {
+	border-radius: 16px;
+	font-weight: bold;
+	font-family: "Montserrat";
+	padding: 10px;
+	background-color: rgb(130, 176, 159);
+	margin:5px;
+	display:flex;
+	font-size: 30px;
+}
+
+.theft-button {
+	border-radius: 16px;
+	font-weight: bold;
+	font-family: "Montserrat";
+	padding: 10px;
+	background-color: rgb(130, 176, 159);
+	margin:5px;
+	display:flex;
+	font-size: 30px;
+}
+
+.trap-button {
+	border-radius: 16px;
+	font-weight: bold;
+	font-family: "Montserrat";
+	padding: 10px;
+	background-color: rgb(130, 176, 159);
+	margin:5px;
+	display:flex;
+	font-size: 30px;
+}
+
+/*imgs*/
+
+/*results box*/
+.page-div {
+display: flex;
+flex-direction: column;
+}
+
+.result-box {
+flex-direction: column;
+border: 1px solid black;
+	padding: 20px;
+	width: 54%;
+	height: 90%;
+ border-radius: 20px;
+ margin:5px;
+ font-size: 25px;
+ font-family: "Montserrat";
+ margin-left: 22%;
+}
+
+/*restart button*/
+.restart-button {
+	border-radius: 16px;
+	font-weight: bold;
+	font-family: "Montserrat";
+	padding: 10px;
+	background-color: rgb(130, 176, 159);
+	margin:5px;
+	display:flex;
+	font-size: 30px;
+	width: 15%;
 }
