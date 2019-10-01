@@ -16,7 +16,7 @@ var win = function () {
         document.querySelector("#resultBox").innerHTML = "It's a draw!";
         document.querySelector(".player-options").style.visibility = "hidden";
     } else if (playerChoice === "Theft" && computerChoice === "Trap") {
-        document.querySelector("#resultBox").innerHTML = "Computer used Trap" + "You used Theft" + "Computer wins instantly with" + " " + computer.gold + "gold!";
+        document.querySelector("#resultBox").innerHTML = "Computer used Trap." + " You used Theft." + " Computer wins instantly with" + " " + computer.gold + " gold!";
         document.querySelector("#computerScore").style.background = "yellow";
         document.querySelector(".player-options").style.visibility = "hidden";
         confetti.start();
@@ -138,6 +138,7 @@ document.body.appendChild(pageDiv);
 playerMakesChoice();
 };
 
+// audio
 //player choices
 var playerMakesChoice = function () {
 
