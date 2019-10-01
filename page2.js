@@ -2,25 +2,7 @@ console.log("woo fun animation");
 
 //sound effects
 var dingDing = document.getElementById("winAudio");
-// function playAudio() {
-//   dingDing.play();
-// };
-
-// function stopAudio() {
-//     dingDing.pause();
-// }
-
 var booYou = document.getElementById("loseAudio");
-// function computerAudio() {
-//     booYou.play();
-// };
-
-// function stopComputerAudio() {
-//     booYou.pause();
-// }
-
-// lose aniimation
-
 
 // outcomes
 var win = function () {
