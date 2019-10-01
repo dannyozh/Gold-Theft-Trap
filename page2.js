@@ -1,12 +1,22 @@
 console.log("woo fun animation");
 //basic win conditions
 
+var dingDing = document.getElementById("winAudio");
+function playAudio() {
+  dingDing.play();
+};
+
+function pauseAudio() {
+  dingDing.pause();
+};
+
 var win = function () {
     if (player.gold === 5 || computer.gold === 0) {
         document.querySelector("#resultBox").innerHTML =playerName + " wins!";
         document.querySelector(".player-options").style.visibility = "hidden";
         document.querySelector("#playerScore").style.background = "yellow";
         confetti.start();
+        playAudio();
     } else if (computer.gold === 5 || player.gold === 0) {
         document.querySelector("#resultBox").innerHTML = "Computer wins!";
         document.querySelector(".player-options").style.visibility = "hidden";
@@ -25,6 +35,7 @@ var win = function () {
         document.querySelector(".player-options").style.visibility = "hidden";
         document.querySelector("#playerScore").style.background = "yellow";
         confetti.start();
+        playAudio();
     }
 };
 
@@ -184,6 +195,7 @@ var clearCounter = function () {
     document.querySelector("#playerScore").style.background = "white";
     document.querySelector("#computerScore").style.background = "white";
     confetti.stop();
+    pauseAudio();
     };
     document.getElementById("theRestartButton").addEventListener('click', clearCounter);
 
