@@ -24,9 +24,17 @@ var clearPage = function () {
     playerName = prompt("Welcome to Gold Theft Trap. Please enter your name.");
     document.getElementById("box-1").style.display = "none";
     createCounters();
+    startAudio();
 };
 
 document.querySelector("#start").addEventListener('click', clearPage);
+
+// sound effect
+var coinEnter = document.getElementById("startAudio");
+
+function startAudio() {
+    coinEnter.play();
+};
 
 //winning/losing variations
 
