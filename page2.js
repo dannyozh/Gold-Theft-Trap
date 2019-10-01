@@ -6,20 +6,23 @@ var booYou = document.getElementById("loseAudio");
 
 // outcomes
 var win = function () {
-    if (player.gold === 5 || computer.gold === 0) {
+    if (computer.gold === 5 && player.gold === 5) {
+        document.querySelector("#resultBox").innerHTML = "It's a draw!";
+        document.querySelector(".player-options").style.visibility = "hidden";
+
+    } else if (player.gold === 5 || computer.gold === 0) {
         document.querySelector("#resultBox").innerHTML =playerName + " wins!";
         document.querySelector(".player-options").style.visibility = "hidden";
         document.querySelector("#playerScore").style.background = "yellow";
         confetti.start();
         dingDing.play();
+
     } else if (computer.gold === 5 || player.gold === 0) {
         document.querySelector("#resultBox").innerHTML = "Computer wins!";
         document.querySelector(".player-options").style.visibility = "hidden";
         document.querySelector("#computerScore").style.background = "yellow";
         booYou.play();
-    } else if (computer.gold === 5 && player.gold === 5) {
-        document.querySelector("#resultBox").innerHTML = "It's a draw!";
-        document.querySelector(".player-options").style.visibility = "hidden";
+
     } else if (playerChoice === "Theft" && computerChoice === "Trap") {
         document.querySelector("#resultBox").innerHTML = "Computer used Trap." + " You used Theft." + " Computer wins instantly with" + " " + computer.gold + " gold!";
         document.querySelector("#computerScore").style.background = "yellow";
