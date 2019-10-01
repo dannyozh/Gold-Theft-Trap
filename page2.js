@@ -54,7 +54,7 @@ counterDiv.id = "counterBoxes";
 var resultsDiv = document.createElement('div');
 resultsDiv.className = "result-box";
 resultsDiv.id = "resultBox";
-resultsDiv.innerHTML = "Result will be determined here!";
+resultsDiv.innerHTML = "Press a button to start!";
 
 // create player counter
 
@@ -71,11 +71,11 @@ playerCountText.innerHTML = playerName + " gold score is " + player.gold + ".";
 //create starting img for  player count box
 
 var starterImage1 = document.createElement("img");
-starterImage1.setAttribute("src", "imgs/gold-coin.jpg");
+starterImage1.setAttribute("src", "imgs/grey-square.jpg");
 starterImage1.id = "starter-image1";
 
 var starterImage2 = document.createElement("img");
-starterImage2.setAttribute("src", "imgs/gold-coin.jpg");
+starterImage2.setAttribute("src", "imgs/grey-square.jpg");
 starterImage2.id = "starter-image2";
 
 //created buttons div and individual buttons
@@ -185,11 +185,11 @@ var clearCounter = function () {
     computer.gold = 1;
     console.clear();
     document.querySelector(".player-options").style.visibility = "visible";
-    document.querySelector("#resultBox").innerHTML = "Result will be determined here!";
+    document.querySelector("#resultBox").innerHTML = "Press a button to start!";
     document.querySelector("#playerScoreText").innerHTML = playerName + " gold score is " + player.gold + ".";
     document.querySelector("#computerLog").innerHTML = "Computer's gold score is " + computer.gold + ".";
-    document.querySelector("#starter-image1").setAttribute("src", "imgs/gold-coin.jpg");
-    document.querySelector("#starter-image2").setAttribute("src", "imgs/gold-coin.jpg");
+    document.querySelector("#starter-image1").setAttribute("src", "imgs/grey-square.jpg");
+    document.querySelector("#starter-image2").setAttribute("src", "imgs/grey-square.jpg");
     document.querySelector("#playerScore").style.background = "white";
     document.querySelector("#computerScore").style.background = "white";
     confetti.stop();
