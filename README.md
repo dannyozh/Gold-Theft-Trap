@@ -1,4 +1,4 @@
-Gold Theft Trap Readme file
+Gold Theft Trap
 
 For my game, I predominantly made use of HTML, CSS (without bootstrap), and a host of JS tools. The latter includes objects, conditional statements and DOM manipulation. 
 
