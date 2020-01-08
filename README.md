@@ -20,3 +20,4 @@ The objective I had at the beginning was to create a game that was not only simp
 * HTML
 * Pure CSS
 * Javascript
+
