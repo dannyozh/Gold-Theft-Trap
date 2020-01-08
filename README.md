@@ -7,7 +7,6 @@ This is a game essentially rock, paper and scissors with a few twists. Its goal 
 1. Fork this repo
 
 2. Run by opening up index.html file
-`
 
 ## Features
 
